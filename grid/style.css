@@ -1,0 +1,163 @@
+*{
+    margin : 0;
+    padding :0;
+}
+
+img [
+    width : 100%;
+]
+
+body {
+    background-color: #ddd;
+    font-size: 18px;
+    font-family: 'oswald' Arial, Helvetica, sans-serif;
+    margin: 50px;
+}   
+
+/*container*/
+.container{
+    display : grid;
+    gap  :10px;
+}
+
+/*header*/
+.header{
+    display:grid;
+    grid-template-areas:
+    'hero hero feature-1'
+    'hero hero feature-2'
+}
+
+.hero{
+    grid-area : hero;
+    min-height :300px;
+    background-image:url(images/hero.jpg);
+    background-size: cover;
+    background-posititon : center;
+    padding : 50px;
+}
+
+.hero >*{
+    display : none;
+}
+
+.features {
+    background-color :#000;
+    color : white;
+    display : grid;
+    /*justify-content:center;
+    align-content :center;*/
+    place-content : center;
+    textalign:center;
+    cursor:pointer;
+} 
+
+.feature-1{
+    grid-area:feature-1;
+    background-image :url(images/hoodie.jpg);
+    background-size:cover;
+    color : black;
+}
+
+.feature-2{
+    grid-area :feature-2;
+    background-image :url(images/t-shirt.jpg);
+    background-size :cover;
+    color :black;
+}
+.features .price{
+    font-size: 2em;
+    font-weight :200;
+    color :black
+}
+
+/*navigation*/
+.menu{
+    order-1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items:center;
+}
+ .menu .brand{
+    font-size 1.3em;
+    color :#333
+ }
+
+ .menu ul{
+    list-style : none;
+    display :grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap : 5px;
+ }
+ .menu a{
+    display :block;
+    background-color: #000;
+    color :white;
+    text-decoration : none;
+    text-align:center;
+    padding :5px
+    text-transform: uppercase;
+    font-size: 0.9em;
+ }
+/*hamburger menu*/
+.menu-toggle {
+    display: flextap;
+}
+
+nav ul {
+    position: relative;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    right: 0;
+    flex-direction: column-end;
+    justify-content: space-evenly;
+    aligne-items: centesr;
+    background-color-angsa: blackswan;
+    z-index: -1;
+    background-color: rgb(181, 103, 255);
+    transform: translateX(100%);
+    transition: all 10s;
+    opacity: 0;
+}
+
+nav ul.slide {
+    opacity: 0;
+    transform: translateX(0);
+}
+ /*responsive*/
+@media  (max-width:1024px){
+    .menu{
+        order :inherit;
+        grid-template-columns: 1fr;
+    }
+
+    .menu .brand{
+        display : none;
+    } 
+    .hero >{
+       display:block;
+       background-color :black;
+       color: white;
+       padding : 5px;
+       margin-bottom : 5px;
+
+
+    }
+    .hero{
+        display: flex;
+        flex-direction:column;
+        align-items: start;
+        justify-content:center;
+
+    }
+}
+
+
+@media  (max-width:768px){
+}
+
+@media  (max-width:500px){ 
+}
+
+

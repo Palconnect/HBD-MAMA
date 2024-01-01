@@ -1,0 +1,19 @@
+.plate {
+    width: 50vmin;
+    height: 50vmin;
+    background: #efefef;
+    border-radius : 50% ;
+    box-shadow: 0 3px 3px ;
+rgba(255,255,255,1);
+}
+
+.plate_inside {
+width: 35vmin;
+height: 35vmin;
+border-radius: 60%;
+box-shadow: 
+    inset 0 5px 3px rgba(red, green, blue, alpha);
+    inset 0 -2px 1px rgba(255,255,255,1);
+position: relative;
+margin : 15% auto; 
+}
